@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temple Industrial Properties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:     #1A2B3C;
+      --navy-mid: #243447;
+      --navy-light: #2E3F52;
+      --amber:    #C4883A;
+      --amber-light: #DBA55A;
+      --offwhite: #F5F1EB;
+      --warm-gray: #9B9287;
+      --rule:     rgba(196,136,58,0.25);
+      --text:     #1A1A18;
+      --text-muted: #6B6560;
+      --card-bg:  #FFFFFF;
+      --page-bg:  #F3EFE9;
+      --border:   #DDD8D0;
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'IBM Plex Mono', monospace;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--page-bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* NAV */
+    nav {
+      background: var(--navy);
+      padding: 0 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-logo-mark {
+      width: 28px;
+      height: 28px;
+      background: var(--amber);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--amber-light); }
+    .nav-cta {
+      background: var(--amber);
+      color: #fff !important;
+      padding: 0.45rem 1.1rem;
+      font-size: 0.8rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.08em;
+      transition: background 0.15s !important;
+    }
+    .nav-cta:hover { background: var(--amber-light) !important; color: #fff !important; }
+
+    /* HERO */
+    .hero {
+      background: var(--navy);
+      padding: 5rem 2.5rem 4.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(196,136,58,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(196,136,58,0.07) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .hero-eyebrow::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 48px;
+      background: var(--amber);
+      opacity: 0.5;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 6vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.0;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 span { color: var(--amber); }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.6);
+      max-width: 540px;
+      line-height: 1.65;
+      margin-bottom: 2.5rem;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .hero-stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 0.25rem;
+    }
+    .hero-stat-value {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+
+    /* SECTION */
+    .section {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem;
+    }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 540px;
+      margin-bottom: 2.75rem;
+    }
+
+    /* FEATURED PROPERTY */
+    .property-featured {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      margin-bottom: 1.75rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+    }
+    .property-map {
+      background: var(--navy-mid);
+      min-height: 340px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .property-map iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      border: none;
+    }
+    .property-map-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .property-map-placeholder svg {
+      opacity: 0.4;
+    }
+    .property-map-placeholder span {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .property-content {
+      padding: 2rem 2.25rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .property-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #E8F5ED;
+      color: #1A6335;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.65rem;
+      margin-bottom: 1.1rem;
+      width: fit-content;
+    }
+    .property-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #2A9D5C;
+      display: block;
+    }
+    .property-address {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--navy);
+      line-height: 1.15;
+      margin-bottom: 0.4rem;
+    }
+    .property-city {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .spec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+    .spec-item {
+      padding: 0.7rem 0.85rem;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .spec-label {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--warm-gray);
+      margin-bottom: 0.15rem;
+    }
+    .spec-value {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: 0.01em;
+    }
+    .property-highlights {
+      list-style: none;
+      margin-bottom: 1.75rem;
+      flex: 1;
+    }
+    .property-highlights li {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      padding: 0.35rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .property-highlights li:last-child { border-bottom: none; }
+    .property-highlights li::before {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 1px;
+      background: var(--amber);
+      flex-shrink: 0;
+    }
+    .property-highlight-star {
+      background: #FFF8EE;
+      color: #8C5C18;
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.4rem 0.75rem;
+      border-left: 2px solid var(--amber);
+      margin-bottom: 1.25rem;
+      line-height: 1.4;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--navy);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.8rem 1.75rem;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      transition: background 0.15s;
+      width: 100%;
+    }
+    .btn-primary:hover { background: var(--navy-light); }
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--navy);
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.8rem 1.75rem;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid var(--navy);
+      transition: background 0.15s, color 0.15s;
+      width: 100%;
+    }
+    .btn-outline:hover { background: var(--navy); color: #fff; }
+
+    /* PROPERTY GRID */
+    .property-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .property-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .property-card-img {
+      height: 160px;
+      background: var(--navy-mid);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.3);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      position: relative;
+    }
+    .property-card-img-pattern {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(196,136,58,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(196,136,58,0.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .card-badge-soon {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(26,43,60,0.85);
+      color: rgba(255,255,255,0.6);
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.6rem;
+    }
+    .property-card-body {
+      padding: 1.25rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .property-card-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
+    }
+    .property-card-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .property-card-specs {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.25rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+    .card-spec-label {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--warm-gray);
+      margin-bottom: 0.1rem;
+    }
+    .card-spec-value {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .property-card-footer {
+      margin-top: auto;
+    }
+
+    /* DIVIDER */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
+      margin: 0 2.5rem;
+    }
+
+    /* CONTACT */
+    .contact-section {
+      background: var(--navy);
+      padding: 4.5rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(196,136,58,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(196,136,58,0.06) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    .contact-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      position: relative;
+    }
+    .contact-info .section-label { color: var(--amber); }
+    .contact-info .section-title { color: #fff; }
+    .contact-info .section-desc { color: rgba(255,255,255,0.55); margin-bottom: 1.75rem; }
+    .contact-detail {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+    .contact-detail-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 0.2rem;
+    }
+    .contact-detail-value {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.8);
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .form-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+    .form-input {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      padding: 0.7rem 0.9rem;
+      outline: none;
+      transition: border-color 0.15s;
+      width: 100%;
+    }
+    .form-input::placeholder { color: rgba(255,255,255,0.25); }
+    .form-input:focus { border-color: var(--amber); }
+    textarea.form-input { resize: vertical; min-height: 100px; }
+    .btn-form {
+      background: var(--amber);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.5rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s;
+      margin-top: 0.25rem;
+    }
+    .btn-form:hover { background: var(--amber-light); }
+    .form-success {
+      display: none;
+      background: rgba(42,157,92,0.15);
+      border: 1px solid rgba(42,157,92,0.3);
+      color: #7ECFA0;
+      font-size: 0.88rem;
+      padding: 0.75rem 1rem;
+      text-align: center;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0F1B27;
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-brand {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+    .footer-note {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.06em;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 720px) {
+      nav { padding: 0 1.25rem; }
+      .nav-links { display: none; }
+      .hero { padding: 3rem 1.25rem 2.5rem; }
+      .hero-stats { gap: 1.5rem; }
+      .section { padding: 2.5rem 1.25rem; }
+      .property-featured { grid-template-columns: 1fr; }
+      .property-map { min-height: 220px; }
+      .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .contact-section { padding: 3rem 1.25rem; }
+      footer { padding: 1.5rem 1.25rem; flex-direction: column; align-items: flex-start; }
+      .spec-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-mark">TI</div>
+    Temple Industrial
+  </div>
+  <ul class="nav-links">
+    <li><a href="#properties">Properties</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Inquire</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Central Texas &mdash; Temple, TX</p>
+    <h1>Industrial &amp;<br><span>Flex Space</span><br>That Works Harder</h1>
+    <p class="hero-sub">
+      Strategic locations in Temple's growing industrial corridor &mdash; at the center of one of America's fastest-expanding infrastructure markets.
+    </p>
+    <div class="hero-stats">
+      <div>
+        <p class="hero-stat-label">Available SF</p>
+        <p class="hero-stat-value">108,500+</p>
+      </div>
+      <div>
+        <p class="hero-stat-label">Acreage</p>
+        <p class="hero-stat-value">14.26 AC</p>
+      </div>
+      <div>
+        <p class="hero-stat-label">IH-35 Access</p>
+        <p class="hero-stat-value">Direct</p>
+      </div>
+      <div>
+        <p class="hero-stat-label">Availability</p>
+        <p class="hero-stat-value">Now</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROPERTIES -->
+<section class="section" id="properties">
+  <p class="section-label">Available Listings</p>
+  <h2 class="section-title">Properties</h2>
+  <p class="section-desc">Adaptable industrial and flex space in Temple's premier industrial park, with direct proximity to major infrastructure investment.</p>
+
+  <!-- FEATURED -->
+  <div class="property-featured">
+    <div class="property-map">
+      <iframe
+        src="https://www.google.com/maps?q=1600+Eberhardt+Rd,+Temple,+TX+76504&output=embed"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Map of 1600 Eberhardt Rd, Temple TX">
+      </iframe>
+    </div>
+    <div class="property-content">
+      <span class="property-badge">Available Now</span>
+      <p class="property-address">1600 Eberhardt Rd</p>
+      <p class="property-city">Temple, TX 76504 &mdash; Temple Industrial Park</p>
+
+      <div class="spec-grid">
+        <div class="spec-item">
+          <p class="spec-label">Total SF</p>
+          <p class="spec-value">108,500</p>
+        </div>
+        <div class="spec-item">
+          <p class="spec-label">Divisible To</p>
+          <p class="spec-value">~54,000</p>
+        </div>
+        <div class="spec-item">
+          <p class="spec-label">Acreage</p>
+          <p class="spec-value">14.26 AC</p>
+        </div>
+        <div class="spec-item">
+          <p class="spec-label">Parking</p>
+          <p class="spec-value">997 Spaces</p>
+        </div>
+        <div class="spec-item">
+          <p class="spec-label">Clear Height</p>
+          <p class="spec-value">20 FT</p>
+        </div>
+        <div class="spec-item">
+          <p class="spec-label">Power</p>
+          <p class="spec-value">3,000 A / 3&phi;</p>
+        </div>
+        <div class="spec-item">
+          <p class="spec-label">Zoning</p>
+          <p class="spec-value">Light Industrial</p>
+        </div>
+        <div class="spec-item">
+          <p class="spec-label">Generator</p>
+          <p class="spec-value">Backup + ATS</p>
+        </div>
+      </div>
+
+      <div class="property-highlight-star">
+        Adjacent to Meta&rsquo;s $800M hyperscale data center &mdash; within the same industrial park as major infrastructure expansion.
+      </div>
+
+      <ul class="property-highlights">
+        <li>Direct IH-35 access &mdash; 45 min north of Austin</li>
+        <li>Within 2.5 hrs of 28 million people</li>
+        <li>Open floor plans, conference rooms &amp; breakrooms</li>
+        <li>10 ft finished ceilings / 20 ft clear to trusses</li>
+        <li>Near Fort Cavazos &mdash; strong regional workforce</li>
+      </ul>
+
+      <a href="#contact" class="btn-primary">Request Information</a>
+    </div>
+  </div>
+
+  <!-- MORE LISTINGS GRID -->
+  <div class="property-grid">
+
+    <div class="property-card">
+      <div class="property-card-img">
+        <div class="property-card-img-pattern"></div>
+        <span class="card-badge-soon">Coming Soon</span>
+      </div>
+      <div class="property-card-body">
+        <p class="property-card-title">Additional Listing</p>
+        <p class="property-card-sub">Temple, TX &mdash; Details forthcoming</p>
+        <div class="property-card-specs">
+          <div>
+            <p class="card-spec-label">Status</p>
+            <p class="card-spec-value">To Be Announced</p>
+          </div>
+        </div>
+        <div class="property-card-footer">
+          <a href="#contact" class="btn-outline">Contact for Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="property-card">
+      <div class="property-card-img">
+        <div class="property-card-img-pattern"></div>
+        <span class="card-badge-soon">Coming Soon</span>
+      </div>
+      <div class="property-card-body">
+        <p class="property-card-title">Additional Listing</p>
+        <p class="property-card-sub">Temple, TX &mdash; Details forthcoming</p>
+        <div class="property-card-specs">
+          <div>
+            <p class="card-spec-label">Status</p>
+            <p class="card-spec-value">To Be Announced</p>
+          </div>
+        </div>
+        <div class="property-card-footer">
+          <a href="#contact" class="btn-outline">Contact for Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="property-card">
+      <div class="property-card-img">
+        <div class="property-card-img-pattern"></div>
+        <span class="card-badge-soon">Coming Soon</span>
+      </div>
+      <div class="property-card-body">
+        <p class="property-card-title">Additional Listing</p>
+        <p class="property-card-sub">Temple, TX &mdash; Details forthcoming</p>
+        <div class="property-card-specs">
+          <div>
+            <p class="card-spec-label">Status</p>
+            <p class="card-spec-value">To Be Announced</p>
+          </div>
+        </div>
+        <div class="property-card-footer">
+          <a href="#contact" class="btn-outline">Contact for Details</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <p class="section-label">Get In Touch</p>
+      <h2 class="section-title">Let&rsquo;s Talk</h2>
+      <p class="section-desc">
+        Interested in a property or want to discuss how a location could fit your operations? Reach out and we'll get back to you promptly.
+      </p>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Location</span>
+        <span class="contact-detail-value">Temple, TX 76504</span>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Email</span>
+        <span class="contact-detail-value">info@templeindustrial.com</span>
+      </div>
+      <div class="contact-detail">
+        <span class="contact-detail-label">Phone</span>
+        <span class="contact-detail-value">(555) 000-0000</span>
+      </div>
+    </div>
+    <div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" for="name">Your name</label>
+          <input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="company">Company</label>
+          <input class="form-input" type="text" id="company" name="company" placeholder="Acme Corp" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="jane@acmecorp.com" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-input" id="message" name="message" placeholder="Tell us about your space needs or which property you'd like to know more about..."></textarea>
+        </div>
+        <button type="submit" class="btn-form">Send Inquiry &rarr;</button>
+        <div class="form-success" id="form-success">
+          Message received &mdash; we'll be in touch shortly.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-brand">Temple Industrial Properties</span>
+  <span class="footer-note">&copy; 2026 &mdash; Temple, TX. All rights reserved.</span>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.btn-form');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    setTimeout(function() {
+      e.target.reset();
+      btn.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }, 800);
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
