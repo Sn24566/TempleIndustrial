@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Properties | Temple Industrial</title>
+  <meta name="description" content="Available and occupied industrial, warehouse, and commercial properties owned by Temple Industrial in Temple, Texas." />
+  <link rel="icon" type="image/svg+xml" href="logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=3" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="logo.svg" alt="Temple Industrial logo" />
+    <div class="nav-wordmark">Temple Industrial<span>Temple, Texas</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="properties.html" class="active">Properties</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEAD -->
+<header class="hero" style="padding-bottom:3rem;">
+  <p class="eyebrow">The Portfolio</p>
+  <h1>Properties</h1>
+  <p class="hero-sub">Ten properties across Temple&rsquo;s industrial corridor &mdash; available space, development-ready land, and fully occupied holdings.</p>
+</header>
+
+<!-- ============ AVAILABLE ============ -->
+<section class="section" style="padding-top:1rem;">
+  <div class="section-head">
+    <h2>Available</h2>
+    <p>Space and land ready for your operation today.</p>
+    <div class="rule"></div>
+  </div>
+
+  <!-- 1600 EBERHARDT RD -->
+  <div class="prop" id="eberhardt">
+    <div class="prop-split">
+      <div class="prop-media" id="eb-media">
+        <img id="eb-photo" src="eberhardt_aerial.jpg" alt="Aerial view of 1600 Eberhardt Rd, Temple TX" style="opacity:1;transition:opacity 0.2s;" />
+        <iframe id="eb-map"
+          src="https://maps.google.com/maps?q=1600+Eberhardt+Rd,+Temple,+TX+76504&z=16&output=embed"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Map of 1600 Eberhardt Rd"
+          style="opacity:0;transition:opacity 0.2s;pointer-events:none;"></iframe>
+        <div class="media-toggles">
+          <button class="media-toggle-btn active" id="eb-btn-photo" onclick="ebToggle('photo')">Photos</button>
+          <button class="media-toggle-btn inactive" id="eb-btn-map" onclick="ebToggle('map')">Map</button>
+        </div>
+        <button class="gallery-prev" id="eb-prev" onclick="ebNav(-1)" aria-label="Previous photo">&#8592;</button>
+        <button class="gallery-next" id="eb-next" onclick="ebNav(1)" aria-label="Next photo">&#8594;</button>
+        <div class="gallery-dots" id="eb-dots"></div>
+      </div>
+      <div class="prop-body">
+        <span class="badge badge-available">Available Now</span>
+        <p class="prop-address">1600 Eberhardt Rd</p>
+        <p class="prop-city">Temple, TX 76504 &mdash; Temple Industrial Park</p>
+        <div class="spec-grid">
+          <div class="spec-item"><p class="spec-label">Total SF</p><p class="spec-value">108,500</p></div>
+          <div class="spec-item"><p class="spec-label">Divisible To</p><p class="spec-value">~54,000 SF</p></div>
+          <div class="spec-item"><p class="spec-label">Acreage</p><p class="spec-value">14.26 AC</p></div>
+          <div class="spec-item"><p class="spec-label">Parking</p><p class="spec-value">997 Spaces</p></div>
+          <div class="spec-item"><p class="spec-label">Clear Height</p><p class="spec-value">20 FT</p></div>
+          <div class="spec-item"><p class="spec-label">Power</p><p class="spec-value">3,000A / 3&phi;</p></div>
+          <div class="spec-item"><p class="spec-label">Year Built</p><p class="spec-value">2001</p></div>
+          <div class="spec-item"><p class="spec-label">Generator</p><p class="spec-value">Backup + ATS</p></div>
+        </div>
+        <div class="highlight">Adjacent to Meta&rsquo;s $800M hyperscale data center &mdash; within the same industrial park as major ongoing infrastructure investment.</div>
+        <ul class="prop-bullets">
+          <li>Direct IH-35 access &mdash; 45 min north of Austin</li>
+          <li>Within 2.5 hrs of 28 million people</li>
+          <li>Reinforced concrete construction &mdash; wet sprinkler system</li>
+          <li>Suite 100: 53,817 SF &nbsp;|&nbsp; Suite 150: 54,683 SF</li>
+          <li>Monument &amp; building signage available</li>
+        </ul>
+        <div class="prop-actions">
+          <a href="contact.html" class="btn btn-solid" style="text-align:center;">Request Information</a>
+          <a href="https://www.loopnet.com/Listing/1600-Eberhardt-Rd-Temple-TX/31351585/" target="_blank" rel="noopener" class="btn btn-outline" style="text-align:center;">View Listing on LoopNet &nearr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2606 W NUGENT AVE (LAND) -->
+  <div class="prop" id="w-nugent">
+    <div class="prop-split">
+      <div class="prop-media" id="wn-media">
+        <img id="wn-photo" src="w_nugent_land.jpg" alt="Aerial view of 2606 W Nugent Ave land parcel, bordering Meta and 1600 Eberhardt Rd" style="opacity:1;transition:opacity 0.2s;" />
+        <iframe id="wn-map"
+          src="https://maps.google.com/maps?q=2606+W+Nugent+Ave,+Temple,+TX+76504&z=15&output=embed"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Map of 2606 W Nugent Ave"
+          style="opacity:0;transition:opacity 0.2s;pointer-events:none;"></iframe>
+        <div class="media-toggles">
+          <button class="media-toggle-btn active" id="wn-btn-photo" onclick="wnToggle('photo')">Photo</button>
+          <button class="media-toggle-btn inactive" id="wn-btn-map" onclick="wnToggle('map')">Map</button>
+        </div>
+      </div>
+      <div class="prop-body">
+        <span class="badge badge-land">Industrial Land &mdash; Sale / Ground Lease / Build-to-Suit</span>
+        <p class="prop-address">2606 W Nugent Ave</p>
+        <p class="prop-city">Temple, TX 76504 &mdash; Temple Industrial Park</p>
+        <div class="spec-grid">
+          <div class="spec-item"><p class="spec-label">Lot Size</p><p class="spec-value">32 AC</p></div>
+          <div class="spec-item"><p class="spec-label">Buildable</p><p class="spec-value">Up to 400,000 SF</p></div>
+          <div class="spec-item"><p class="spec-label">Available For</p><p class="spec-value">Sale &middot; Ground Lease &middot; BTS</p></div>
+          <div class="spec-item"><p class="spec-label">Use</p><p class="spec-value">Industrial / Whse / Mfg</p></div>
+        </div>
+        <div class="highlight">Directly borders Meta&rsquo;s $800M hyperscale data center campus and our 1600 Eberhardt Rd property.</div>
+        <ul class="prop-bullets">
+          <li>32 development-ready acres in Temple Industrial Park</li>
+          <li>Supports up to 400,000 SF of warehouse / manufacturing</li>
+          <li>Adjacent to Meta&rsquo;s data center land</li>
+          <li>Adjacent to 1600 Eberhardt Rd (108,500 SF facility)</li>
+          <li>Frontage on W Nugent Ave &mdash; minutes from IH-35</li>
+          <li>Build-to-suit options available</li>
+        </ul>
+        <div class="prop-actions">
+          <a href="contact.html" class="btn btn-solid" style="text-align:center;">Contact for Pricing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2520 N GENERAL BRUCE DR (LAND) -->
+  <div class="prop" id="general-bruce-land">
+    <div class="prop-media" style="position:relative;height:420px;" id="gb-gallery">
+      <img id="gb-img" src="general_bruce_aerial1.jpg" alt="Aerial view of 2520 N General Bruce Dr" style="position:absolute;inset:0;object-fit:cover;" />
+      <div class="plan-notice" id="gb-cerris" style="display:none;">Example build-to-suit layout provided by <strong>Cerris Builders</strong>. This site can accommodate a wide range of custom configurations &mdash; tenants are not limited to these options.</div>
+      <button class="gallery-prev" onclick="gbNav(-1)" aria-label="Previous image">&#8592;</button>
+      <button class="gallery-next" onclick="gbNav(1)" aria-label="Next image">&#8594;</button>
+      <div class="gallery-dots" id="gb-dots"></div>
+    </div>
+    <div class="prop-split">
+      <div class="prop-body">
+        <span class="badge badge-land">Industrial Land &mdash; Sale / Ground Lease / Build-to-Suit</span>
+        <p class="prop-address">2520 N General Bruce Dr</p>
+        <p class="prop-city">Temple, TX 76501 &mdash; IH-35 Frontage</p>
+        <div class="spec-grid">
+          <div class="spec-item"><p class="spec-label">Lot Size</p><p class="spec-value">32.56 AC</p></div>
+          <div class="spec-item"><p class="spec-label">Buildable</p><p class="spec-value">Up to 400,000 SF</p></div>
+          <div class="spec-item"><p class="spec-label">Zoning</p><p class="spec-value">Heavy &amp; Light Ind.</p></div>
+          <div class="spec-item"><p class="spec-label">Available For</p><p class="spec-value">Sale &middot; Ground Lease &middot; BTS</p></div>
+          <div class="spec-item"><p class="spec-label">Rail</p><p class="spec-value">&plusmn;2,040 FT BNSF</p></div>
+          <div class="spec-item"><p class="spec-label">Power</p><p class="spec-value">3-Phase / Full Utilities</p></div>
+        </div>
+        <ul class="prop-bullets">
+          <li>Supports up to 400,000 SF of warehouse / manufacturing</li>
+          <li>Direct IH-35 visibility &amp; frontage access</li>
+          <li>BNSF Rail line along full west boundary</li>
+          <li>Existing stabilized areas &amp; driveways on site</li>
+          <li>Ideal for IOS, distribution, or manufacturing</li>
+          <li>Build-to-suit options available (see gallery)</li>
+        </ul>
+      </div>
+      <div class="prop-body" style="border-left:1px solid var(--border);">
+        <p class="eyebrow" style="margin-bottom:0.9rem;">Gallery Guide</p>
+        <div id="gb-slide-list" style="margin-bottom:1.5rem;"></div>
+        <div class="prop-actions">
+          <a href="contact.html" class="btn btn-solid" style="text-align:center;">Contact for Pricing</a>
+          <a href="https://www.loopnet.com/Listing/2520-General-Bruce-dr-Temple-TX/39808216/" target="_blank" rel="noopener" class="btn btn-outline" style="text-align:center;">View Listing on LoopNet &nearr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OCCUPIED ============ -->
+<section class="section" style="padding-top:0.5rem;">
+  <div class="section-head">
+    <h2>Occupied</h2>
+    <p>Fully leased holdings in the Temple Industrial portfolio.</p>
+    <div class="rule"></div>
+  </div>
+
+  <!-- RANGE ROAD INDUSTRIAL PARK -->
+  <div class="prop" id="range-road-park">
+    <div class="prop-split">
+      <div>
+        <div class="park-photo">
+          <img src="range_road_aerial_v2.jpg" alt="Aerial view of Range Road Industrial Park" />
+          <svg class="park-overlay" viewBox="0 0 2117 1320" preserveAspectRatio="none" aria-hidden="true">
+            <polygon data-b="0" points="1662,218 1838,302 1745,458 1580,362"><title>3940 Range Rd &mdash; 37,000 SF</title></polygon>
+            <polygon data-b="1" points="1465,564 1700,507 1728,700 1492,759"><title>3918 Range Rd, Ste A &mdash; 30,000 SF</title></polygon>
+            <polygon data-b="3" points="941,496 1230,398 1309,631 1021,731"><title>10986 NW H K Dodgen Loop &mdash; 60,000 SF</title></polygon>
+            <polygon data-b="2" points="871,837 1092,765 1143,933 924,1007"><title>3906 Range Rd &mdash; 32,000 SF</title></polygon>
+            <polygon data-b="4" points="551,464 880,596 787,967 479,829"><title>3831 Lucius McCelvey Dr &mdash; 70,000 SF</title></polygon>
+            <circle class="park-dot" data-b="0" cx="1706" cy="335" r="34"></circle>
+            <circle class="park-dot" data-b="1" cx="1596" cy="632" r="34"></circle>
+            <circle class="park-dot" data-b="3" cx="1125" cy="564" r="34"></circle>
+            <circle class="park-dot" data-b="2" cx="1007" cy="885" r="34"></circle>
+            <circle class="park-dot" data-b="4" cx="674" cy="714" r="34"></circle>
+          </svg>
+        </div>
+        <p class="park-hint">Hover over a building in the photo &mdash; or a row in the table &mdash; to see which is which.</p>
+        <iframe class="park-map-small" src="https://maps.google.com/maps?q=3918+Range+Rd,+Temple,+TX+76504&t=k&z=16&output=embed"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Satellite view of Range Road Industrial Park"></iframe>
+      </div>
+      <div class="prop-body">
+        <span class="badge badge-occupied">Occupied &mdash; Fully Leased</span>
+        <p class="prop-address">Range Road Industrial Park</p>
+        <p class="prop-city">Temple, TX 76504 &mdash; Five-building warehouse park</p>
+        <table class="park-table" id="park-table">
+          <thead><tr><th>Building</th><th>SF</th></tr></thead>
+          <tbody>
+            <tr><td>3940 Range Rd</td><td>37,000</td></tr>
+            <tr><td>3918 Range Rd, Ste A</td><td>30,000</td></tr>
+            <tr><td>3906 Range Rd</td><td>32,000</td></tr>
+            <tr><td>10986 NW H K Dodgen Loop</td><td>60,000</td></tr>
+            <tr><td>3831 Lucius McCelvey Dr</td><td>70,000</td></tr>
+            <tr><td>Combined</td><td>229,000</td></tr>
+          </tbody>
+        </table>
+        <ul class="prop-bullets">
+          <li>Five buildings in one contiguous industrial park</li>
+          <li>Warehouse &amp; manufacturing use</li>
+          <li>Minutes from IH-35 via NW H K Dodgen Loop</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2501 N GENERAL BRUCE DR -->
+  <div class="prop" id="general-bruce-2501">
+    <div class="prop-split">
+      <div class="prop-media">
+        <iframe src="https://maps.google.com/maps?q=2501+N+General+Bruce+Dr,+Temple,+TX+76501&t=k&z=17&output=embed"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Satellite view of 2501 N General Bruce Dr"></iframe>
+      </div>
+      <div class="prop-body">
+        <span class="badge badge-occupied">Occupied &mdash; Fully Leased</span>
+        <p class="prop-address">2501 N General Bruce Dr</p>
+        <p class="prop-city">Temple, TX 76501 &mdash; IH-35 Corridor</p>
+        <div class="spec-grid">
+          <div class="spec-item"><p class="spec-label">Total SF</p><p class="spec-value">210,000</p></div>
+          <div class="spec-item"><p class="spec-label">Type</p><p class="spec-value">Warehouse / Mfg</p></div>
+        </div>
+        <ul class="prop-bullets">
+          <li>Largest single building in the portfolio</li>
+          <li>Warehouse &amp; manufacturing use</li>
+          <li>Direct IH-35 corridor location</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2002 W SCOTT BLVD -->
+  <div class="prop" id="scott-blvd">
+    <div class="prop-split">
+      <div class="prop-media" id="sc-media">
+        <img id="sc-photo" src="scott3.jpg" alt="Front exterior of 2002 W Scott Blvd, Temple TX" style="opacity:1;transition:opacity 0.2s;" />
+        <iframe id="sc-map"
+          src="https://maps.google.com/maps?q=2002+W+Scott+Blvd,+Temple,+TX+76504&t=k&z=18&output=embed"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Satellite view of 2002 W Scott Blvd"
+          style="opacity:0;transition:opacity 0.2s;pointer-events:none;"></iframe>
+        <div class="media-toggles">
+          <button class="media-toggle-btn active" id="sc-btn-photo" onclick="scToggle('photo')">Photos</button>
+          <button class="media-toggle-btn inactive" id="sc-btn-map" onclick="scToggle('map')">Map</button>
+        </div>
+        <button class="gallery-prev" id="sc-prev" onclick="scNav(-1)" aria-label="Previous photo">&#8592;</button>
+        <button class="gallery-next" id="sc-next" onclick="scNav(1)" aria-label="Next photo">&#8594;</button>
+        <div class="gallery-dots" id="sc-dots"></div>
+      </div>
+      <div class="prop-body">
+        <span class="badge badge-occupied">Occupied &mdash; Fully Leased</span>
+        <p class="prop-address">2002 W Scott Blvd</p>
+        <p class="prop-city">Temple, TX 76504</p>
+        <div class="spec-grid">
+          <div class="spec-item"><p class="spec-label">Total SF</p><p class="spec-value">12,000</p></div>
+          <div class="spec-item"><p class="spec-label">Type</p><p class="spec-value">Office</p></div>
+        </div>
+        <ul class="prop-bullets">
+          <li>The portfolio&rsquo;s lone office building &mdash; the famous 2.1%</li>
+          <li>Near Baylor Scott &amp; White medical district</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <h2>Interested in a property?</h2>
+  <p>Reach out to us by email &mdash; please include your company name and the property or space you&rsquo;re interested in.</p>
+  <a href="contact.html" class="btn btn-solid">Contact Us</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-brand">Temple Industrial</span>
+  <span class="footer-note">&copy; 2026 Temple Industrial &mdash; Temple, TX. All rights reserved.</span>
+</footer>
+
+<script>
+  /* === 1600 Eberhardt — Photo gallery + Map toggle === */
+  var ebSlides = [
+    { src: 'eberhardt_aerial.jpg', label: 'Aerial view of 1600 Eberhardt Rd' },
+    { src: 'eberhardt_ext.jpg', label: 'Building exterior along Eberhardt Rd' },
+    { src: 'eberhardt_interior_lobby.jpg', label: 'Lobby and reception' },
+    { src: 'eberhardt_int1.jpg', label: 'Open office floor' }
+  ];
+  var ebCurrent = 0;
+
+  function ebBuild() {
+    var dotsEl = document.getElementById('eb-dots');
+    dotsEl.innerHTML = '';
+    ebSlides.forEach(function (_, i) {
+      var d = document.createElement('button');
+      d.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+      d.onclick = function () { ebCurrent = i; ebUpdate(); };
+      dotsEl.appendChild(d);
+    });
+  }
+
+  function ebNav(dir) {
+    ebCurrent = (ebCurrent + dir + ebSlides.length) % ebSlides.length;
+    ebUpdate();
+  }
+
+  function ebUpdate() {
+    var s = ebSlides[ebCurrent];
+    var img = document.getElementById('eb-photo');
+    img.style.opacity = '0';
+    setTimeout(function () {
+      img.src = s.src;
+      img.alt = s.label;
+      img.style.opacity = '1';
+    }, 150);
+    document.querySelectorAll('#eb-dots .gallery-dot').forEach(function (d, i) {
+      d.className = 'gallery-dot' + (i === ebCurrent ? ' active' : '');
+    });
+  }
+
+  function ebToggle(mode) {
+    var photo = document.getElementById('eb-photo');
+    var mapEl = document.getElementById('eb-map');
+    var btnP = document.getElementById('eb-btn-photo');
+    var btnM = document.getElementById('eb-btn-map');
+    var galleryUI = [document.getElementById('eb-prev'), document.getElementById('eb-next'), document.getElementById('eb-dots')];
+    if (mode === 'photo') {
+      photo.style.opacity = '1'; photo.style.pointerEvents = 'auto';
+      mapEl.style.opacity = '0'; mapEl.style.pointerEvents = 'none';
+      btnP.className = 'media-toggle-btn active';
+      btnM.className = 'media-toggle-btn inactive';
+      galleryUI.forEach(function (el) { el.style.display = ''; });
+    } else {
+      mapEl.style.opacity = '1'; mapEl.style.pointerEvents = 'auto';
+      photo.style.opacity = '0'; photo.style.pointerEvents = 'none';
+      btnM.className = 'media-toggle-btn active';
+      btnP.className = 'media-toggle-btn inactive';
+      galleryUI.forEach(function (el) { el.style.display = 'none'; });
+    }
+  }
+
+  ebBuild();
+
+  /* === 2002 W Scott Blvd — Photo gallery + Map toggle === */
+  var scSlides = [
+    { src: 'scott3.jpg', label: 'Front exterior of 2002 W Scott Blvd' },
+    { src: 'scott4.jpg', label: 'Side exterior of 2002 W Scott Blvd' },
+    { src: 'scott1.jpg', label: 'Bird’s-eye view of 2002 W Scott Blvd' },
+    { src: 'scott2.jpg', label: 'Conference room' }
+  ];
+  var scCurrent = 0;
+
+  function scBuild() {
+    var dotsEl = document.getElementById('sc-dots');
+    dotsEl.innerHTML = '';
+    scSlides.forEach(function (_, i) {
+      var d = document.createElement('button');
+      d.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+      d.onclick = function () { scCurrent = i; scUpdate(); };
+      dotsEl.appendChild(d);
+    });
+  }
+
+  function scNav(dir) {
+    scCurrent = (scCurrent + dir + scSlides.length) % scSlides.length;
+    scUpdate();
+  }
+
+  function scUpdate() {
+    var s = scSlides[scCurrent];
+    var img = document.getElementById('sc-photo');
+    img.style.opacity = '0';
+    setTimeout(function () {
+      img.src = s.src;
+      img.alt = s.label;
+      img.style.opacity = '1';
+    }, 150);
+    document.querySelectorAll('#sc-dots .gallery-dot').forEach(function (d, i) {
+      d.className = 'gallery-dot' + (i === scCurrent ? ' active' : '');
+    });
+  }
+
+  function scToggle(mode) {
+    var photo = document.getElementById('sc-photo');
+    var mapEl = document.getElementById('sc-map');
+    var btnP = document.getElementById('sc-btn-photo');
+    var btnM = document.getElementById('sc-btn-map');
+    var galleryUI = [document.getElementById('sc-prev'), document.getElementById('sc-next'), document.getElementById('sc-dots')];
+    if (mode === 'photo') {
+      photo.style.opacity = '1'; photo.style.pointerEvents = 'auto';
+      mapEl.style.opacity = '0'; mapEl.style.pointerEvents = 'none';
+      btnP.className = 'media-toggle-btn active';
+      btnM.className = 'media-toggle-btn inactive';
+      galleryUI.forEach(function (el) { el.style.display = ''; });
+    } else {
+      mapEl.style.opacity = '1'; mapEl.style.pointerEvents = 'auto';
+      photo.style.opacity = '0'; photo.style.pointerEvents = 'none';
+      btnM.className = 'media-toggle-btn active';
+      btnP.className = 'media-toggle-btn inactive';
+      galleryUI.forEach(function (el) { el.style.display = 'none'; });
+    }
+  }
+
+  scBuild();
+
+  /* === 2606 W Nugent — Photo / Map toggle === */
+  function wnToggle(mode) {
+    var photo = document.getElementById('wn-photo');
+    var mapEl = document.getElementById('wn-map');
+    var btnP = document.getElementById('wn-btn-photo');
+    var btnM = document.getElementById('wn-btn-map');
+    if (mode === 'photo') {
+      photo.style.opacity = '1'; photo.style.pointerEvents = 'auto';
+      mapEl.style.opacity = '0'; mapEl.style.pointerEvents = 'none';
+      btnP.className = 'media-toggle-btn active';
+      btnM.className = 'media-toggle-btn inactive';
+    } else {
+      mapEl.style.opacity = '1'; mapEl.style.pointerEvents = 'auto';
+      photo.style.opacity = '0'; photo.style.pointerEvents = 'none';
+      btnM.className = 'media-toggle-btn active';
+      btnP.className = 'media-toggle-btn inactive';
+    }
+  }
+
+  /* === 2520 General Bruce — Image gallery === */
+  var gbSlides = [
+    { src: 'general_bruce_aerial1.jpg', label: 'Aerial view — IH-35 frontage', plan: false },
+    { src: 'general_bruce_aerial2.jpg', label: 'Aerial view — Industrial Blvd', plan: false },
+    { src: 'general_bruce_map.jpg', label: 'Parcel boundary — satellite view', plan: false },
+    { src: 'option5.jpg', label: 'Example layout — Option 5 R.3', plan: true },
+    { src: 'option6.jpg', label: 'Example layout — Option 6 R.4', plan: true }
+  ];
+  var gbCurrent = 0;
+
+  function gbBuild() {
+    var dotsEl = document.getElementById('gb-dots');
+    dotsEl.innerHTML = '';
+    gbSlides.forEach(function (_, i) {
+      var d = document.createElement('button');
+      d.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      d.onclick = function () { gbGoto(i); };
+      dotsEl.appendChild(d);
+    });
+    var listEl = document.getElementById('gb-slide-list');
+    listEl.innerHTML = '';
+    gbSlides.forEach(function (s, i) {
+      var row = document.createElement('div');
+      row.id = 'gb-list-' + i;
+      row.style.cssText = 'display:flex;align-items:center;gap:0.5rem;padding:0.32rem 0;border-bottom:1px solid var(--border);cursor:pointer;font-size:0.84rem;color:var(--muted);';
+      row.innerHTML = '<span style="font-size:0.62rem;color:var(--lilac-600);min-width:18px;font-weight:600;">' + String(i + 1).padStart(2, '0') + '</span>' + s.label + (s.plan ? ' <span style="font-size:0.62rem;background:var(--lilac-100);color:var(--lilac-800);padding:1px 6px;margin-left:auto;">Plan</span>' : '');
+      row.onclick = function () { gbGoto(i); };
+      listEl.appendChild(row);
+    });
+    var last = listEl.lastChild;
+    if (last) last.style.borderBottom = 'none';
+    gbUpdate();
+  }
+
+  function gbGoto(idx) { gbCurrent = idx; gbUpdate(); }
+  function gbNav(dir) { gbCurrent = (gbCurrent + dir + gbSlides.length) % gbSlides.length; gbUpdate(); }
+
+  function gbUpdate() {
+    var s = gbSlides[gbCurrent];
+    var img = document.getElementById('gb-img');
+    img.style.opacity = '0';
+    setTimeout(function () {
+      img.src = s.src;
+      img.alt = s.label;
+      img.style.opacity = '1';
+    }, 150);
+    document.getElementById('gb-cerris').style.display = s.plan ? 'block' : 'none';
+    document.querySelectorAll('.gallery-dot').forEach(function (d, i) {
+      d.className = 'gallery-dot' + (i === gbCurrent ? ' active' : '');
+    });
+    document.querySelectorAll('[id^="gb-list-"]').forEach(function (r, i) {
+      r.style.color = (i === gbCurrent) ? 'var(--charcoal)' : 'var(--muted)';
+      r.style.fontWeight = (i === gbCurrent) ? '600' : '400';
+    });
+  }
+
+  document.getElementById('gb-img').style.transition = 'opacity 0.15s';
+  gbBuild();
+
+  /* === Range Road Park — hover sync between photo and table === */
+  (function () {
+    var polys = document.querySelectorAll('.park-overlay polygon');
+    var dots = document.querySelectorAll('.park-overlay .park-dot');
+    var rows = document.querySelectorAll('#park-table tbody tr');
+    function setHot(i, on) {
+      dots.forEach(function (d) {
+        if (d.getAttribute('data-b') === String(i)) d.classList.toggle('hot', on);
+      });
+      if (rows[i]) rows[i].classList.toggle('hot', on);
+    }
+    polys.forEach(function (p) {
+      var i = parseInt(p.getAttribute('data-b'), 10);
+      p.addEventListener('mouseenter', function () { setHot(i, true); });
+      p.addEventListener('mouseleave', function () { setHot(i, false); });
+    });
+    rows.forEach(function (r, i) {
+      if (i >= 5) return; // skip Combined row
+      r.addEventListener('mouseenter', function () { setHot(i, true); });
+      r.addEventListener('mouseleave', function () { setHot(i, false); });
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44" height="44">
+  <!-- Temple Industrial mark: sawtooth industrial roofline over serif TI -->
+  <rect x="1" y="1" width="42" height="42" fill="#FFFFFF" stroke="#8A6FA8" stroke-width="1.5"/>
+  <path d="M8 15 L13 9.5 L13 15 L18 9.5 L18 15 L23 9.5 L23 15 L28 9.5 L28 15 L33 9.5 L33 15 Z" fill="#8A6FA8" opacity="0.9"/>
+  <text x="22" y="35" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="17" font-weight="600" letter-spacing="1" fill="#2A2733">TI</text>
+</svg>
