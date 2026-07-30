@@ -3,75 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Temple Industrial | Industrial &amp; Commercial Properties in Temple, TX</title>
-  <meta name="description" content="Temple Industrial owns and manages over 550,000 SF of industrial, warehouse, and commercial property in Temple, Texas, on the I-35 corridor." />
+  <title>Industrial &amp; Warehouse Space for Lease | Temple, TX</title>
+  <meta name="description" content="Over 550,000 SF of warehouse and industrial property in Temple, Texas on the IH-35 corridor. 108,500 SF and 64.56 acres available now." />
   <link rel="canonical" href="https://templeindustrial.com/" />
 
   <!-- Social / link previews -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Temple Industrial" />
-  <meta property="og:title" content="Temple Industrial | Industrial &amp; Commercial Properties in Temple, TX" />
-  <meta property="og:description" content="Temple Industrial owns and manages over 550,000 SF of industrial, warehouse, and commercial property in Temple, Texas, on the I-35 corridor." />
+  <meta property="og:title" content="Industrial &amp; Warehouse Space for Lease in Temple, TX" />
+  <meta property="og:description" content="Over 550,000 SF of warehouse and industrial property in Temple, Texas on the IH-35 corridor. 108,500 SF and 64.56 acres available now." />
   <meta property="og:url" content="https://templeindustrial.com/" />
   <meta property="og:image" content="https://templeindustrial.com/eberhardt_aerial.jpg" />
+  <meta property="og:image:width" content="1800" />
+  <meta property="og:image:height" content="1039" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#FBFAF8" />
 
   <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    "name": "Temple Industrial",
-    "description": "Owner and manager of industrial, warehouse, and commercial property in Temple, Texas, along the I-35 corridor.",
-    "url": "https://templeindustrial.com/",
-    "logo": "https://templeindustrial.com/logo.svg",
-    "image": "https://templeindustrial.com/eberhardt_aerial.jpg",
-    "telephone": "+1-254-598-0191",
-    "email": "Spencer@jencerinv.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Temple",
-      "addressRegion": "TX",
-      "addressCountry": "US"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "Temple",
-      "containedInPlace": {
-        "@type": "State",
-        "name": "Texas"
+    "@graph": [
+      {
+        "@type": ["RealEstateAgent", "LocalBusiness"],
+        "@id": "https://templeindustrial.com/#organization",
+        "name": "Temple Industrial",
+        "description": "Owner and manager of industrial, warehouse, and commercial property in Temple, Texas, along the IH-35 corridor.",
+        "url": "https://templeindustrial.com/",
+        "logo": "https://templeindustrial.com/logo.svg",
+        "image": "https://templeindustrial.com/eberhardt_aerial.jpg",
+        "telephone": "+1-254-598-0191",
+        "email": "Spencer@jencerinv.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Temple",
+          "addressRegion": "TX",
+          "postalCode": "76504",
+          "addressCountry": "US"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Temple", "containedInPlace": { "@type": "State", "name": "Texas" } },
+          { "@type": "City", "name": "Belton" },
+          { "@type": "City", "name": "Killeen" },
+          { "@type": "AdministrativeArea", "name": "Bell County, Texas" }
+        ],
+        "knowsAbout": [
+          "Industrial real estate leasing",
+          "Warehouse space",
+          "Build-to-suit development",
+          "Industrial land",
+          "Ground leases"
+        ],
+        "employee": [
+          { "@type": "Person", "name": "Spencer Neman", "email": "Spencer@jencerinv.com", "jobTitle": "Leasing & Availability" },
+          { "@type": "Person", "name": "Jenna", "email": "Jenna@jencerinv.com", "jobTitle": "Leasing & Availability" }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://templeindustrial.com/#website",
+        "url": "https://templeindustrial.com/",
+        "name": "Temple Industrial",
+        "publisher": { "@id": "https://templeindustrial.com/#organization" }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Available properties — Temple, TX",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "url": "https://templeindustrial.com/1600-eberhardt-rd-temple-tx/", "name": "1600 Eberhardt Rd — 108,500 SF Flex / Industrial" },
+          { "@type": "ListItem", "position": 2, "url": "https://templeindustrial.com/2606-w-nugent-ave-temple-tx/", "name": "2606 W Nugent Ave — 32 AC Industrial Land" },
+          { "@type": "ListItem", "position": 3, "url": "https://templeindustrial.com/2520-n-general-bruce-dr-temple-tx/", "name": "2520 N General Bruce Dr — 32.56 AC Industrial Land" }
+        ]
       }
-    }
+    ]
   }
   </script>
 
   <link rel="icon" type="image/svg+xml" href="logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" /></noscript>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" /></noscript>
+  <link rel="stylesheet" href="styles.css?v=4" />
+  <script src="site.js" defer></script>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="index.html">
-    <img src="logo.svg" alt="Temple Industrial logo" />
+  <a class="nav-logo" href="/">
+    <img src="logo.svg" alt="Temple Industrial logo" width="40" height="40" />
     <div class="nav-wordmark">Temple Industrial<span>Temple, Texas</span></div>
   </a>
-  <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="/" class="active">Home</a></li>
     <li><a href="properties.html">Properties</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
+<main id="main">
+
 <!-- HERO -->
 <header class="hero">
-  <p class="eyebrow">Temple, Texas &mdash; Central Texas I-35 Corridor</p>
-  <h1>Industrial space in the heart of <em>Central Texas</em></h1>
-  <p class="hero-sub">Temple Industrial owns and manages a portfolio of warehouse, manufacturing, and commercial properties along Temple&rsquo;s premier industrial corridor &mdash; over half a million square feet with direct access to IH-35.</p>
+  <p class="eyebrow">Temple, Texas &mdash; Central Texas IH-35 Corridor</p>
+  <h1>Industrial &amp; Warehouse Space for Lease in <em>Temple, TX</em></h1>
+  <p class="hero-sub">Temple Industrial owns and manages a portfolio of warehouse, manufacturing, and commercial properties along Temple&rsquo;s industrial corridor &mdash; over half a million square feet with direct access to IH-35.</p>
   <p class="hero-joke">We&rsquo;d say we&rsquo;re 100% industrial &mdash; but one office snuck into the portfolio, so we&rsquo;re 97.9% true to our name.</p>
   <div class="hero-actions">
     <a href="properties.html" class="btn btn-solid">View Properties</a>
@@ -92,7 +135,7 @@
 <!-- MAP -->
 <section class="section" id="locations">
   <div class="section-head">
-    <h2>Our Locations</h2>
+    <h2>Our Locations in Temple</h2>
     <p>Every property in the portfolio sits within Temple&rsquo;s industrial corridor, minutes from IH-35. Select a pin to view details.</p>
     <div class="rule"></div>
   </div>
@@ -103,17 +146,17 @@
   </div>
 </section>
 
-<!-- PORTFOLIO PREVIEW -->
+<!-- AVAILABLE NOW -->
 <section class="section" style="padding-top:1rem;">
   <div class="section-head">
-    <h2>The Portfolio</h2>
-    <p>Ten properties &mdash; warehouse, manufacturing, office, and development-ready land.</p>
+    <h2>Available Now</h2>
+    <p>Warehouse space and development-ready land you can take today.</p>
     <div class="rule"></div>
   </div>
   <div class="card-grid">
 
-    <a class="card" href="properties.html#eberhardt">
-      <div class="card-media"><img src="eberhardt_aerial.jpg" alt="1600 Eberhardt Rd aerial view" loading="lazy" /></div>
+    <a class="card" href="1600-eberhardt-rd-temple-tx/">
+      <div class="card-media"><img src="eberhardt_aerial.jpg" alt="Aerial view of the 108,500 SF warehouse and flex facility at 1600 Eberhardt Rd, Temple TX" width="1800" height="1039" loading="lazy" /></div>
       <div class="card-body">
         <span class="badge badge-available">Available Now</span>
         <p class="card-title">1600 Eberhardt Rd</p>
@@ -122,8 +165,8 @@
       </div>
     </a>
 
-    <a class="card" href="properties.html#w-nugent">
-      <div class="card-media"><img src="w_nugent_land.jpg" alt="2606 W Nugent Ave land parcel aerial view" loading="lazy" /></div>
+    <a class="card" href="2606-w-nugent-ave-temple-tx/">
+      <div class="card-media"><img src="w_nugent_land.jpg" alt="Aerial view of the 32-acre industrial land parcel at 2606 W Nugent Ave, Temple TX" width="1118" height="1138" loading="lazy" /></div>
       <div class="card-body">
         <span class="badge badge-land">Land &mdash; Sale / Lease / BTS</span>
         <p class="card-title">2606 W Nugent Ave</p>
@@ -132,8 +175,8 @@
       </div>
     </a>
 
-    <a class="card" href="properties.html#general-bruce-land">
-      <div class="card-media"><img src="general_bruce_aerial1.jpg" alt="2520 N General Bruce Dr aerial view" loading="lazy" /></div>
+    <a class="card" href="2520-n-general-bruce-dr-temple-tx/">
+      <div class="card-media"><img src="general_bruce_aerial1.jpg" alt="Aerial view of the 32.56-acre industrial site at 2520 N General Bruce Dr, Temple TX" width="1800" height="933" loading="lazy" /></div>
       <div class="card-body">
         <span class="badge badge-land">Land &mdash; Sale / Lease / BTS</span>
         <p class="card-title">2520 N General Bruce Dr</p>
@@ -142,8 +185,20 @@
       </div>
     </a>
 
-    <a class="card" href="properties.html#range-road-park">
-      <div class="card-media"><iframe src="https://maps.google.com/maps?q=3940+Range+Rd,+Temple,+TX+76504&t=k&z=16&output=embed" loading="lazy" title="Range Road Industrial Park satellite view"></iframe></div>
+  </div>
+</section>
+
+<!-- THE REST OF THE PORTFOLIO -->
+<section class="section" style="padding-top:1rem;">
+  <div class="section-head">
+    <h2>The Rest of the Portfolio</h2>
+    <p>Fully leased holdings &mdash; not available, but they are what we do.</p>
+    <div class="rule"></div>
+  </div>
+  <div class="card-grid">
+
+    <a class="card" href="properties.html?show=occupied#range-road-park">
+      <div class="card-media"><img src="range_road_aerial_v2.jpg" alt="Aerial view of the five buildings at Range Road Industrial Park, Temple TX" width="2117" height="1320" loading="lazy" /></div>
       <div class="card-body">
         <span class="badge badge-occupied">Occupied</span>
         <p class="card-title">Range Road Industrial Park</p>
@@ -152,8 +207,8 @@
       </div>
     </a>
 
-    <a class="card" href="properties.html#general-bruce-2501">
-      <div class="card-media"><iframe src="https://maps.google.com/maps?q=2501+N+General+Bruce+Dr,+Temple,+TX+76501&t=k&z=17&output=embed" loading="lazy" title="2501 N General Bruce Dr satellite view"></iframe></div>
+    <a class="card" href="properties.html?show=occupied#general-bruce-2501">
+      <div class="card-media"><iframe src="https://maps.google.com/maps?q=2501+N+General+Bruce+Dr,+Temple,+TX+76501&t=k&z=17&output=embed" loading="lazy" title="Satellite view of 2501 N General Bruce Dr, Temple TX"></iframe></div>
       <div class="card-body">
         <span class="badge badge-occupied">Occupied</span>
         <p class="card-title">2501 N General Bruce Dr</p>
@@ -162,8 +217,8 @@
       </div>
     </a>
 
-    <a class="card" href="properties.html#scott-blvd">
-      <div class="card-media"><iframe src="https://maps.google.com/maps?q=2002+W+Scott+Blvd,+Temple,+TX+76504&t=k&z=18&output=embed" loading="lazy" title="2002 W Scott Blvd satellite view"></iframe></div>
+    <a class="card" href="properties.html?show=occupied#scott-blvd">
+      <div class="card-media"><img src="scott3.jpg" alt="Front exterior of the office building at 2002 W Scott Blvd, Temple TX" width="1800" height="913" loading="lazy" /></div>
       <div class="card-body">
         <span class="badge badge-occupied">Occupied</span>
         <p class="card-title">2002 W Scott Blvd</p>
@@ -175,21 +230,58 @@
   </div>
 </section>
 
+</main>
+
 <!-- CTA -->
 <section class="cta-band">
   <h2>Interested in a property?</h2>
-  <p>Reach out to us by email &mdash; please include your company name and the property or space you&rsquo;re interested in.</p>
-  <a href="contact.html" class="btn btn-solid">Contact Us</a>
+  <p>Tell us your square footage, use, and timeline, and we will come back with what fits.</p>
+  <a class="btn btn-solid"
+     href="mailto:Spencer@jencerinv.com?cc=Jenna@jencerinv.com&amp;subject=Property%20Inquiry%20%E2%80%94%20Temple%20Industrial&amp;body=Hello%2C%0D%0A%0D%0AI%27m%20interested%20in%20space%20in%20Temple%2C%20TX.%0D%0A%0D%0ACompany%3A%0D%0AProperty%20of%20interest%3A%0D%0ASpace%20needed%20(SF)%3A%0D%0AIntended%20use%3A%0D%0ATarget%20occupancy%20date%3A%0D%0APhone%3A%0D%0A%0D%0AQuestions%3A%0D%0A%0D%0AThank%20you%2C%0D%0A">Email Us</a>
+  <p class="btn-microcopy">Opens your email app, pre-filled &mdash; or see all contact options on the <a href="contact.html" style="text-decoration:underline;">contact page</a></p>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <span class="footer-brand">Temple Industrial</span>
-  <span class="footer-note">&copy; 2026 Temple Industrial &mdash; Temple, TX. All rights reserved.</span>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <address class="footer-nap">
+        <span class="org">Temple Industrial</span>
+        Industrial, warehouse, and commercial property<br />
+        Temple, Texas 76504<br />
+        <a href="tel:+12545980191">(254) 598-0191</a><br />
+        <a href="mailto:Spencer@jencerinv.com">Spencer@jencerinv.com</a>
+      </address>
+    </div>
+    <div class="footer-col">
+      <p class="footer-h">Looking For</p>
+      <ul>
+        <li><a href="warehouse-space-temple-tx/">Warehouse space in Temple, TX</a></li>
+        <li><a href="industrial-land-temple-tx/">Industrial land in Temple, TX</a></li>
+        <li><a href="properties.html">All properties</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <p class="footer-h">Available Now</p>
+      <ul>
+        <li><a href="1600-eberhardt-rd-temple-tx/">1600 Eberhardt Rd</a></li>
+        <li><a href="2606-w-nugent-ave-temple-tx/">2606 W Nugent Ave</a></li>
+        <li><a href="2520-n-general-bruce-dr-temple-tx/">2520 N General Bruce Dr</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Temple Industrial &mdash; Temple, TX. All rights reserved.</span>
+    <span>Central Texas &middot; IH-35 Corridor</span>
+  </div>
 </footer>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
 <script>
+window.addEventListener('load', function () {
+  if (typeof L === 'undefined') return;
+
   var map = L.map('map', { scrollWheelZoom: false }).setView([31.112, -97.360], 13);
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
@@ -199,16 +291,16 @@
   var COLORS = { available: '#4E8A62', land: '#4E8A62', occupied: '#8A6FA8' };
 
   var properties = [
-    { name: '1600 Eberhardt Rd',          lat: 31.11708, lng: -97.36280, status: 'available', meta: '108,500 SF · Flex / Industrial · Available Now', anchor: 'eberhardt' },
-    { name: '2520 N General Bruce Dr',    lat: 31.12400, lng: -97.35120, status: 'land',      meta: '32.56 AC · Sale / Ground Lease / BTS', anchor: 'general-bruce-land' },
-    { name: '2606 W Nugent Ave',          lat: 31.11900, lng: -97.36700, status: 'land',      meta: '32 AC · Sale / Ground Lease / BTS', anchor: 'w-nugent' },
-    { name: '2501 N General Bruce Dr',    lat: 31.12287, lng: -97.34919, status: 'occupied',  meta: '210,000 SF · Warehouse / Manufacturing · Occupied', anchor: 'general-bruce-2501' },
-    { name: '2002 W Scott Blvd',          lat: 31.07948, lng: -97.37075, status: 'occupied',  meta: '12,000 SF · Office · Occupied', anchor: 'scott-blvd' },
-    { name: '3940 Range Rd',              lat: 31.13791, lng: -97.34599, status: 'occupied',  meta: '37,000 SF · Range Road Industrial Park · Occupied', anchor: 'range-road-park' },
-    { name: '3918 Range Rd Ste A',        lat: 31.13756, lng: -97.34612, status: 'occupied',  meta: '30,000 SF · Range Road Industrial Park · Occupied', anchor: 'range-road-park' },
-    { name: '3906 Range Rd',              lat: 31.13737, lng: -97.34619, status: 'occupied',  meta: '32,000 SF · Range Road Industrial Park · Occupied', anchor: 'range-road-park' },
-    { name: '10986 NW H K Dodgen Loop',   lat: 31.14025, lng: -97.34577, status: 'occupied',  meta: '60,000 SF · Range Road Industrial Park · Occupied', anchor: 'range-road-park' },
-    { name: '3831 Lucius McCelvey Dr',    lat: 31.13897, lng: -97.34994, status: 'occupied',  meta: '70,000 SF · Range Road Industrial Park · Occupied', anchor: 'range-road-park' }
+    { name: '1600 Eberhardt Rd',          lat: 31.11708, lng: -97.36280, status: 'available', meta: '108,500 SF · Flex / Industrial · Available Now', href: '1600-eberhardt-rd-temple-tx/' },
+    { name: '2520 N General Bruce Dr',    lat: 31.12400, lng: -97.35120, status: 'land',      meta: '32.56 AC · Sale / Ground Lease / BTS', href: '2520-n-general-bruce-dr-temple-tx/' },
+    { name: '2606 W Nugent Ave',          lat: 31.11900, lng: -97.36700, status: 'land',      meta: '32 AC · Sale / Ground Lease / BTS', href: '2606-w-nugent-ave-temple-tx/' },
+    { name: '2501 N General Bruce Dr',    lat: 31.12287, lng: -97.34919, status: 'occupied',  meta: '210,000 SF · Warehouse / Manufacturing · Occupied', href: 'properties.html?show=occupied#general-bruce-2501' },
+    { name: '2002 W Scott Blvd',          lat: 31.07948, lng: -97.37075, status: 'occupied',  meta: '12,000 SF · Office · Occupied', href: 'properties.html?show=occupied#scott-blvd' },
+    { name: '3940 Range Rd',              lat: 31.13791, lng: -97.34599, status: 'occupied',  meta: '37,000 SF · Range Road Industrial Park · Occupied', href: 'properties.html?show=occupied#range-road-park' },
+    { name: '3918 Range Rd Ste A',        lat: 31.13756, lng: -97.34612, status: 'occupied',  meta: '30,000 SF · Range Road Industrial Park · Occupied', href: 'properties.html?show=occupied#range-road-park' },
+    { name: '3906 Range Rd',              lat: 31.13737, lng: -97.34619, status: 'occupied',  meta: '32,000 SF · Range Road Industrial Park · Occupied', href: 'properties.html?show=occupied#range-road-park' },
+    { name: '10986 NW H K Dodgen Loop',   lat: 31.14025, lng: -97.34577, status: 'occupied',  meta: '60,000 SF · Range Road Industrial Park · Occupied', href: 'properties.html?show=occupied#range-road-park' },
+    { name: '3831 Lucius McCelvey Dr',    lat: 31.13897, lng: -97.34994, status: 'occupied',  meta: '70,000 SF · Range Road Industrial Park · Occupied', href: 'properties.html?show=occupied#range-road-park' }
   ];
 
   properties.forEach(function (p) {
@@ -224,9 +316,10 @@
       .bindPopup(
         '<p class="popup-name">' + p.name + '</p>' +
         '<p class="popup-meta">' + p.meta + '</p>' +
-        '<a class="popup-link" href="properties.html#' + p.anchor + '">View Details &rarr;</a>'
+        '<a class="popup-link" href="' + p.href + '">View Details &rarr;</a>'
       );
   });
+});
 </script>
 </body>
 </html>
